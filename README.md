@@ -1,7 +1,7 @@
 # my-expo-Uber-Clone
 Uber Clone build developed in REACT NATIVE with Expo (Navigation, redux, Tailwind CSS, Google Autocomplete, Google Directions API, Google Places API, Google Distance Matrix API)
 My my-expo-Uber-Clone ✨
-(Optional: Include a captivating screenshot or GIF of your project in action here. It's often the first thing people look at!)
+Uber Clone HomePage Screenshot
 
 
 ![UberApp HomeScreen scaled300](https://github.com/user-attachments/assets/bfdc4889-d953-49e4-a206-85a4a0351627)
@@ -11,10 +11,10 @@ My my-expo-Uber-Clone ✨
 
 
 
-A concise and compelling description of your project. What is its core purpose? What problem does it solve? What makes it unique or interesting?
-This is an Uber Clone developed using Papafam Youtube tutorial. 
 
-🚀 Live Demo
+This is an Uber Clone developed using Papafam Let's Build an Uber Clone with REACT NATIVE!(Navigation, Redux, TailwindCSS, Google Autocomplete and other Google Maps API's. Youtube tutorial. 
+
+🚀 Live 
 See the application live here: https://your-deployed-app-url.com
 
 ✨ Features
