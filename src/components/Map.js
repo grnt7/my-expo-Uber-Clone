@@ -1,9 +1,4 @@
 import { StyleSheet, Text, View } from 'react-native'
-
-//import MapView, { Marker } from 'react-native-maps';
-//import { PROVIDER_GOOGLE } from 'react-native-maps'; // remove PROVIDER_GOOGLE import if not using Google Maps
-
-
 import React, {useEffect, useRef} from 'react';
 import MapView, { Marker } from 'react-native-maps';
 import tw from 'twrnc';
@@ -19,20 +14,7 @@ const Map = () => {
   const mapRef = useRef(null);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    if (!origin || !destination) return;
-
-    
-    //Zoom & fit to markers its not zooming out!
-    mapRef.current.fitToSuppliedMarkers(["origin", "destination"], {
-      edgePadding: {
-        top: 50,
-        right: 50,
-        bottom: 50,
-        left: 50,
-      },
-    });
-  }, [origin, destination]);
+  
 
   useEffect(() => {
     if (!origin || !destination) return;
@@ -58,6 +40,7 @@ const Map = () => {
         longitude:origin.location.lng,
         latitudeDelta: 0.005,
         longitudeDelta: 0.005,
+        
       }}
     >
 
@@ -92,8 +75,8 @@ const Map = () => {
           longitude: destination.location.lng,
         }}
       title="Destination"
-        description={origin.description}
-        identifier="origin"
+        description={destination.description}
+        identifier="destination"
         />
       )}
       
@@ -119,4 +102,20 @@ const styles = StyleSheet.create({});
       longitudeDelta: 0.005,
     }}
 
+
+
+    useEffect(() => {
+    if (!origin || !destination) return;
+
+    
+    //Zoom & fit to markers its not zooming out!
+    mapRef.current.fitToSuppliedMarkers(["origin", "destination"], {
+      edgePadding: {
+        top: 50,
+        right: 50,
+        bottom: 50,
+        left: 50,
+      },
+    });
+  }, [origin, destination]);
 */
