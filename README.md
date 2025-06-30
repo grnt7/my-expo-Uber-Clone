@@ -4,7 +4,8 @@ My my-expo-Uber-Clone ✨
 (Optional: Include a captivating screenshot or GIF of your project in action here. It's often the first thing people look at!)
 
 ![UberApp HomeScreenScaled200jpg](https://github.com/user-attachments/assets/ffb708f0-6522-427f-a83a-082b3c5ee336)
-![UberApp HomeScreenScaledjpg](https://github.com/user-attachments/assets/081ebb35-33ad-4e59-a74a-69e8b532dd5d)
+![UberApp HomeScreen scaled300](https://github.com/user-attachments/assets/bfdc4889-d953-49e4-a206-85a4a0351627)
+
 
 
 
