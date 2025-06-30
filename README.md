@@ -9,6 +9,8 @@ My my-expo-Uber-Clone ✨
 ![Screenshot_GetaRide300x675](https://github.com/user-attachments/assets/2fb32628-2146-48d6-b98f-64815b284b8b)
 
 ![MapscreenwithMenu3](https://github.com/user-attachments/assets/15d3dc79-3768-4bd9-9385-efb8e279dce8)
+![DestinationScreen300x673](https://github.com/user-attachments/assets/64a7930d-9307-40de-9a08-dd11383b93cc)
+
 ![Screenshot_RideOptions300x673](https://github.com/user-attachments/assets/5d2dd6ca-31fd-419f-b19b-e3b4976f830b)
 
 
