@@ -1,7 +1,10 @@
 # my-expo-Uber-Clone
 Uber Clone build developed in REACT NATIVE with Expo (Navigation, redux, Tailwind CSS, Google Autocomplete, Google Directions API, Google Places API, Google Distance Matrix API)
-My Awesome Project Name ✨
+My my-expo-Uber-Clone ✨
 (Optional: Include a captivating screenshot or GIF of your project in action here. It's often the first thing people look at!)
+
+![UberApp HomeScreen Update](https://github.com/user-attachments/assets/f9bce925-c08e-44b4-9787-e9b9f00fac21)
+
 
 A concise and compelling description of your project. What is its core purpose? What problem does it solve? What makes it unique or interesting?
 
