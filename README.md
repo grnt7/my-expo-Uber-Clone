@@ -1,10 +1,11 @@
 # my-expo-Uber-Clone
 Uber Clone build developed in REACT NATIVE with Expo (Navigation, redux, Tailwind CSS, Google Autocomplete, Google Directions API, Google Places API, Google Distance Matrix API)
 My my-expo-Uber-Clone ✨
-Uber Clone HomePage Screenshot
+
 
 
 ![UberApp HomeScreen scaled300](https://github.com/user-attachments/assets/bfdc4889-d953-49e4-a206-85a4a0351627)
+Uber Clone HomePage Screenshot
 
 
 
