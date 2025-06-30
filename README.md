@@ -3,7 +3,8 @@ Uber Clone build developed in REACT NATIVE with Expo (Navigation, redux, Tailwin
 My my-expo-Uber-Clone ✨
 (Optional: Include a captivating screenshot or GIF of your project in action here. It's often the first thing people look at!)
 
-![UberApp HomeScreen Update](https://github.com/user-attachments/assets/f9bce925-c08e-44b4-9787-e9b9f00fac21)
+![UberApp HomeScreenScaledjpg](https://github.com/user-attachments/assets/326cb133-bf1d-41a3-a50b-a08a7ad28053)
+
 
 
 A concise and compelling description of your project. What is its core purpose? What problem does it solve? What makes it unique or interesting?
