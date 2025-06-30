@@ -12,7 +12,7 @@ See the application live here: https://your-deployed-app-url.com
 Key Feature 1: Fully responsive design ensures seamless experience across all devices. 
 Key Feature 2: HomePage UI uses a stylish Dark Mode that transitions into light mode. An intuitive location Search bar with Google Places Autocomplete integrated for finding Places/ addresses.
 Key Feature 3: Navigate from Get A Ride to Mapscreen using Touchable Opacity. Destination Search Bar with GooglePlaces Autocomplete. On selection tansitions seamlessly to Ride Options Screen.
-Key Feature 4: Detail a unique functionality (e.g., "Dynamic data fetching from an Google Maps API with robust error handling.").
+Key Feature 4: Google Distance Matrix API ("Dynamic data fetching from an Google Maps API calculation of distance between two locations").
 Key Feature 5: Mention specific interactions (e.g., "Interactive drag-and-drop interface for task management.").
 [Add more features relevant to your project]
 🛠️ Technologies Used
@@ -31,8 +31,8 @@ MongoDB (or PostgreSQL/MySQL/Firebase Firestore) To Be Followed Up Later
 
 APIs Integrated:
 
-Google Maps Platform
-
+Google Maps Platform:
+Google Autocomplete, Google Directions API, Google Places API, Google Distance Matrix API
 Deployment:
 Netlify (or Vercel/Firebase Hosting/AWS Amplify)
 Version Control:
