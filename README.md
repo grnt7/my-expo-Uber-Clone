@@ -7,6 +7,8 @@ My my-expo-Uber-Clone ✨
 ![UberApp HomeScreen scaled300](https://github.com/user-attachments/assets/bfdc4889-d953-49e4-a206-85a4a0351627) 
 ![Screenshot_2AutocompleteDarkAutocomplete](https://github.com/user-attachments/assets/4e1f4216-b172-4d80-ba26-7e3fd284c66b)
 ![MapscreenwithMenu3](https://github.com/user-attachments/assets/15d3dc79-3768-4bd9-9385-efb8e279dce8)
+![Screenshot_RideOptions300x673](https://github.com/user-attachments/assets/5d2dd6ca-31fd-419f-b19b-e3b4976f830b)
+
 
 
 
