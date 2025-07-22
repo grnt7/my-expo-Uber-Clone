@@ -2,9 +2,7 @@
 import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity, Alert } from 'react-native'
 import React from 'react'
 import tw from 'twrnc';
-// REMOVE THIS IMPORT: import {GooglePlacesTextInput} from 'react-native-google-places-textinput';
 
-// IMPORT YOUR CUSTOM AutocompleteInput COMPONENT
 import AutocompleteInput from '../components/AutocompleteInput';
 
 // You might not need Maps_APIKEY directly here if AutocompleteInput handles it internally
