@@ -13,6 +13,9 @@ My my-expo-Uber-Clone ✨
 <img width="200" height="500" alt="DestinationScreen" src="https://github.com/user-attachments/assets/40081ab1-cd63-43eb-9572-1b780f7056b1" />
 
 
+<img width="200" height="500" alt="Screenshot_RideOptions" src="https://github.com/user-attachments/assets/d7fd7118-6983-4903-b4f4-8ec8e4c54fa9" />
+
+
 
 
 
