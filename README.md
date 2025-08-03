@@ -10,6 +10,7 @@ My my-expo-Uber-Clone ✨
 
 <img width="200" height="500" alt="MapscreenwithMenu 200px" src="https://github.com/user-attachments/assets/4c840fcb-2447-4fae-92d2-05355ec25d45" />
 
+<img width="200" height="500" alt="DestinationScreen" src="https://github.com/user-attachments/assets/40081ab1-cd63-43eb-9572-1b780f7056b1" />
 
 
 
