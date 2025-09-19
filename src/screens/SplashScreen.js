@@ -29,8 +29,8 @@ const SplashScreen = ({ navigation }) => {
 // Use a StyleSheet to define the animation size for better performance.
 const styles = StyleSheet.create({
   animation: {
-    width: '100%',
-    height: '100%',
+    width:'100%',
+    height:'100%',
   },
 });
 
