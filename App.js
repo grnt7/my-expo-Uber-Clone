@@ -1,11 +1,13 @@
 import React from 'react'
 
+
 import {StyleSheet, View, Text } from 'react-native'
 
 import 'react-native-reanimated';
 import { Provider } from "react-redux";
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { store } from "./store";
+import SplashScreen from './src/screens/SplashScreen';
 import HomeScreen from './src/screens/HomeScreen'; // Adjust the path as necessary
 import MapScreen from './src/screens/MapScreen'; // Adjust the path as necessary
 import NavigateCard from './src/components/NavigateCard'; // Adjust the path as necessary
@@ -27,6 +29,11 @@ const App = () => {
    <NavigationContainer>
     <SafeAreaProvider>
       <Stack.Navigator>
+        <Stack.Screen 
+       name="SplashScreen" 
+        component={SplashScreen} 
+        options={{ headerShown: false}}
+       />
        <Stack.Screen 
        name="HomeScreen" 
         component={HomeScreen} 
@@ -57,4 +64,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;

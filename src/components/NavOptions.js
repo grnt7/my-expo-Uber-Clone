@@ -1,4 +1,6 @@
 import {  FlatList, Text, View, TouchableOpacity, Image} from 'react-native';
+import Ionicons from '@expo/vector-icons/Ionicons';
+import AntDesign from '@expo/vector-icons/AntDesign';
 import React from 'react';
 import tw from 'twrnc';
 
@@ -56,11 +58,12 @@ const data = [
                             source={{ uri: item.image }}
                         />
                         <Text style={tw`mt-2 text-lg font-semibold`}>{item.title}</Text>
-                        <Icon
-                            style={tw`p-2 bg-black rounded-full w-10 mt-4`}
+                        <AntDesign name= "arrow-right"
+                            style={tw`p-2 bg-black rounded-full h-10 w-10 mt-4 `}
                             type="antdesign"
                             color="white"
-                            name="arrowright"
+                            size={20}
+                           
                         />
                     </View>
                 </TouchableOpacity>

@@ -8,9 +8,12 @@
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/Uber_Logo_Black_RGB.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#ffffff",
+       "plugins": [
+      "expo-router"
+    ]
     },
     "ios": {
       "supportsTablet": true
