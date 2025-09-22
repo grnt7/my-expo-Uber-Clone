@@ -1,4 +1,3 @@
-import React from 'react';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 
 const GooglePlacesInput = () => {
@@ -6,7 +5,7 @@ const GooglePlacesInput = () => {
     <GooglePlacesAutocomplete
       placeholder='Search'
       onPress={(data, details = null) => {
-        // 'details' is provided when fetchDetails = true
+        //'details' is provided when fetchDetails = true
         console.log(data, details);
       }}
       query={{

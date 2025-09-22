@@ -1,14 +1,10 @@
 // NavigateCard.js
 import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity, Alert } from 'react-native'
-import React from 'react'
 import tw from 'twrnc';
-
 import AutocompleteInput from '../components/AutocompleteInput';
-
 // You might not need Maps_APIKEY directly here if AutocompleteInput handles it internally
 // but it's good to keep it imported if other parts of NavigateCard or its sub-components use it
-import { Maps_APIKEY } from '@env';
-
+//import { Maps_APIKEY } from '@env';
 import { useDispatch } from 'react-redux';
 import { setDestination } from '../slices/navSlice';
 import { useNavigation } from '@react-navigation/native';
@@ -39,8 +35,6 @@ const NavigateCard = () => {
             Alert.alert("Destination Error", "Could not get full details for the selected destination. Please try again or choose a different one.");
         }
     };
-
-   
 
     return (
         <SafeAreaView style={tw`bg-white flex-1`}>
@@ -80,22 +74,21 @@ const NavigateCard = () => {
 
 export default NavigateCard;
 
-// Note: The original 'toInputBoxStyles' is no longer used directly by the new component
-// as it expects a different structure for its 'styles' prop.
+
 const toInputBoxStyles = StyleSheet.create({
     container: {
-        backgroundColor: "white",
-        paddingTop: 20,
-        flex: 0,
+        backgroundColor:"white",
+        paddingTop:20,
+        flex:0,
     },
     textInput: {
-        backgroundColor: "#DDDDDF",
-        borderRadius: 0,
-        fontSize: 18,
+        backgroundColor:"#DDDDDF",
+        borderRadius:0,
+        fontSize:18,
     },
     textInputContainer: {
-        paddingHorizontal: 20,
-        paddingBottom: 0,
+        paddingHorizontal:20,
+        paddingBottom:0,
     },
 });
 

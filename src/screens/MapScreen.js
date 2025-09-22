@@ -1,14 +1,10 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-
 import tw from 'twrnc';
 import Map from '../components/Map';
 import NavigateCard from '../components/NavigateCard';
-
 import RideOptionsCard from '../components/RideOptionsCard';
-//import MapView, { PROVIDER_GOOGLE } from 'react-native-maps'; // remove PROVIDER_GOOGLE import if not using Google Maps
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Icon } from "@rneui/themed"; // Use the updated RNEUI package
-//import { MenuOutlined  } from '@ant-design/icons';
 import { useNavigation } from '@react-navigation/native';
 import { useSelector } from 'react-redux';
 import { selectOrigin, selectDestination } from '../slices/navSlice';
@@ -16,13 +12,13 @@ import { selectOrigin, selectDestination } from '../slices/navSlice';
 const MapScreen = () => {
     const Stack = createNativeStackNavigator();
     const navigation = useNavigation();
-    // >>>>>>>>>>>>>> SELECTORS TO GET DATA FROM REDUX <<<<<<<<<<<<<<
+   
     const origin = useSelector(selectOrigin);
     const destination = useSelector(selectDestination);
 
     // >>>>>>>>>>>>>> CONSOLE LOGS TO INSPECT DATA <<<<<<<<<<<<<<
-    console.log("MapScreen - Current Origin from Redux:", origin);
-    console.log("MapScreen - Current Destination from Redux:", destination);
+    console.log("MapScreen-Current Origin from Redux:", origin);
+    console.log("MapScreen-Current Destination from Redux:", destination);
 
 
     return (
@@ -34,7 +30,7 @@ const MapScreen = () => {
             </TouchableOpacity>
 
             <View style={tw`h-1/2`}>
-                {/* The Map component likely consumes 'origin' and 'destination' */}
+                {/*The Map component likely consumes 'origin' and 'destination'*/}
                 <Map />
             </View>
             <View style={tw`h-1/2`}>
@@ -61,5 +57,5 @@ const MapScreen = () => {
 
 export default MapScreen;
 
-const styles = StyleSheet.create({});
+
 

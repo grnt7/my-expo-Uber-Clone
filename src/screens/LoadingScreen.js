@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import tw from 'twrnc';
 import LottieView from 'lottie-react-native';
 
-const SplashScreen = ({ navigation }) => {
+const LoadingScreen = ({ navigation }) => {
   const [isAnimationFinished, setAnimationFinished] = useState(false);
 
   // Function to handle the animation completion
@@ -34,5 +34,5 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SplashScreen;
+export default LoadingScreen;
 

@@ -14,8 +14,6 @@ const Map = () => {
   const mapRef = useRef(null);
   const dispatch = useDispatch();
 
-  
-
   useEffect(() => {
     if (!origin || !destination) return;
 
@@ -34,7 +32,6 @@ const Map = () => {
     <MapView
       ref={mapRef}
       style={tw`flex-1`}
-      //mapType="mutedStandard"
       initialRegion={{
         latitude: origin.location.lat,
         longitude:origin.location.lng,
@@ -52,7 +49,6 @@ const Map = () => {
         strokeWidth={3}
         strokeColor="black"
 
-        
         />
       )}
      

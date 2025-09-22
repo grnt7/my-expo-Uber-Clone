@@ -65,8 +65,7 @@ const RideOptionsCard = () => {
                 >
                     <Icon name="chevron-left" type="font-awesome" />
                 </TouchableOpacity>
-                <Text style={tw`text-center py-5 text-xl`}>
-                    Select A Ride - {travelTimeInformation?.distance?.text || "Calculating..."}
+                <Text style={tw`text-center py-5 text-xl`}>Select A Ride{travelTimeInformation?.distance?.text || "Calculating..."}
                 </Text>
             </View>
 
@@ -98,7 +97,7 @@ const RideOptionsCard = () => {
 
             <View style={tw`mt-auto border-t border-gray-100`}>
                 <TouchableOpacity disabled={!selected} style={tw`bg-black py-3 m-3 rounded-xl ${!selected && "bg-gray-300"}`}>
-                    <Text style={tw`text-center text-white text-xl`}>Choose {selected?.title || "Ride"}</Text>
+                    <Text style={tw`text-center text-white text-xl`}>Choose{selected?.title || "Ride"}</Text>
                 </TouchableOpacity>
             </View>
         </SafeAreaView>

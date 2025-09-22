@@ -1,16 +1,11 @@
 import {  FlatList, Text, View, TouchableOpacity, Image} from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import AntDesign from '@expo/vector-icons/AntDesign';
-import React from 'react';
 import tw from 'twrnc';
-
-
 import { Icon } from "@rneui/themed"; // Use the updated RNEUI package
 import { useNavigation } from '@react-navigation/native';//installed
-
 import { useSelector } from'react-redux';
 import { selectOrigin } from '../slices/navSlice';
-
 
 
 const data = [
@@ -59,11 +54,10 @@ const data = [
                         />
                         <Text style={tw`mt-2 text-lg font-semibold`}>{item.title}</Text>
                         <AntDesign name= "arrow-right"
-                            style={tw`p-2 bg-black rounded-full h-10 w-10 mt-4 `}
+                            style={tw`p-2 bg-black rounded-full h-10 w-10 mt-4`}
                             type="antdesign"
                             color="white"
-                            size={20}
-                           
+                            size={20}   
                         />
                     </View>
                 </TouchableOpacity>
@@ -75,7 +69,4 @@ const data = [
     export default NavOptions;
 
 
-  
-
-// Note: The above code uses Tailwind CSS for styling, React Navigation for navigation, and Redux for state management.
-// Make sure to install the necessary packages and set up your project accordingly.
+  // Note: The above code uses Tailwind CSS for styling, React Navigation for navigation, and Redux for state management.

@@ -144,7 +144,6 @@ export default function AutocompleteInput({ onPlaceSelect, placeholder, value, o
             }
           }}
         />
-
         {/* Clear Input Button - only show if localQuery is not empty */}
         {localQuery.length > 0 && (
           <TouchableOpacity onPress={clearInput} style={styles.clearButton}>
@@ -203,7 +202,7 @@ const styles = StyleSheet.create({
     
     paddingHorizontal: 12,
     borderRadius: 20,
-    backgroundColor: '#f9f9f9',
+    backgroundColor:'#f9f9f9',
     fontSize: 16,
     color: '#333',
     paddingRight: 40,
@@ -223,13 +222,13 @@ const styles = StyleSheet.create({
     color: '#888',
   },
   predictionsList: {
-    position: 'absolute',
-    width: '100%',
+    position:'absolute',
+    width:'100%',
     top: 55,
     left: 16,
     right: 16,
     maxHeight: 200,
-    backgroundColor: 'white',
+    backgroundColor:'white',
     borderColor: '#ddd',
     borderWidth: 1,
     borderRadius: 8,
@@ -250,24 +249,24 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 12,
     borderBottomWidth: 1,
-    borderColor: '#eee',
+    borderColor:'#eee',
   },
   itemText: {
     fontSize: 16,
     color: '#333',
   },
   loadingIndicator: {
-    position: 'absolute',
+    position:'absolute',
     right: 45,
     top: 0,
     bottom: 0,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent:'center',
+    alignItems:'center',
     zIndex: 1,
   },
   emptyListText: {
     padding: 15,
-    textAlign: 'center',
+    textAlign:'center',
     color: '#888',
   }
 });
