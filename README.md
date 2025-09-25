@@ -3,7 +3,8 @@ Uber Clone build developed in REACT NATIVE with Expo (Navigation, redux, Tailwin
 My my-expo-Uber-Clone ✨
 
 
-<img width="200" height="500" alt="Screenshot_20250629_154959" src="https://github.com/user-attachments/assets/a9db0578-f663-40c9-a779-4ecdcedb9fa1" />
+
+<img width="200" height="500" alt="Screenshot_GetaRide" src="https://github.com/user-attachments/assets/7fc981e3-c018-4d73-9168-a425b5c8a878" />
 
 <img width="200" height="500"  alt="Screenshot_2AutocompleteDark" src="https://github.com/user-attachments/assets/3aec69c2-87af-4c9c-b337-b1b5c746605c" />
 
