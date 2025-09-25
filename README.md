@@ -69,7 +69,7 @@ Follow these steps to get a copy of the project running on your local machine fo
 Clone the repository:
 Bash
 
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/grnt7/my-expo-Uber-Clone)
 Navigate into the project directory:
 Bash
 
@@ -88,12 +88,14 @@ Start the development server:
 Bash
 
 npm start  # or yarn start
+npx expo start
 The application should automatically open in your default browser at http://localhost:3000 (or another port if specified).
 🚀 Usage
 [Describe how a user would interact with your application.]
-Example: "Navigate through the product categories using the sidebar."
-Example: "Use the search bar to find specific items."
-Example: "Click the 'Add to Cart' button to simulate a purchase."
+1. Home screen: "Select your pickup location using the Google places autocomplete search bar."
+2. Home Screen: "Press the "Get a Ride" option to navigate to the next screen.
+3.Destination Map Screen: Select your Destination location using the Google places autocomplete search bar.
+4. Select a Ride: Navigate options by scrolling horozontally. Choose your Ride from Uber X, Uber XL, Uber Lux. Prices and Journey times calculated.
 [Include any specific login details if applicable for a demo (e.g., Demo Username: test@example.com, Password: password123)]
 🧪 Testing (Optional but highly recommended for demonstrating quality)
 To run the automated tests for this project:
@@ -119,7 +121,7 @@ Distributed under the MIT License. See LICENSE for more information.
 📞 Contact
 Your Name - Your Email Address
 
-Project Link: https://github.com/your-username/your-repo-name
+Project Link: https://github.com/grnt7/my-expo-Uber-Clone)
 
 LinkedIn: https://www.linkedin.com/in/your-linkedin-profile
 
