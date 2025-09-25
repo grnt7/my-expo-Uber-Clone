@@ -28,7 +28,7 @@ This is an Uber Clone developed using Papafam Let's Build an Uber Clone with REA
 🚀 Live 
 See the application live by downloading Expo Go here: https://expo.dev/go
 Scan the QR code:
-<img width="2133" height="2133" alt="image" src="https://github.com/user-attachments/assets/238ac0c5-c88d-41f8-8f6f-941d505b69a1" />
+<img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/238ac0c5-c88d-41f8-8f6f-941d505b69a1" />
 
 ✨ Features
 Key Feature 1: Fully responsive design ensures seamless experience across all devices. 
