@@ -90,8 +90,9 @@ Bash
 npm start  # or yarn start
 npx expo start
 The application should automatically open in your default browser at http://localhost:3000 (or another port if specified).
+
 🚀 Usage
-[Describe how a user would interact with your application.]
+
 1. Home screen: "Select your pickup location using the Google places autocomplete search bar."
 2. Home Screen: "Press the "Get a Ride" option to navigate to the next screen.
 3.Destination Map Screen: Select your Destination location using the Google places autocomplete search bar.
