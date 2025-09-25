@@ -94,9 +94,14 @@ The application should automatically open in your default browser at http://loca
 🚀 Usage
 
 1. Home screen: "Select your pickup location using the Google places autocomplete search bar."
-2. Home Screen: "Press the "Get a Ride" option to navigate to the next screen.
-3.Destination Map Screen: Select your Destination location using the Google places autocomplete search bar.
+
+2. Home Screen: "Press the "Get a Ride" option to navigate to the Destination screen.
+
+3. Destination Map Screen: Select your Destination location using the Google places autocomplete search bar.
+
 4. Select a Ride: Navigate options by scrolling horozontally. Choose your Ride from Uber X, Uber XL, Uber Lux. Prices and Journey times calculated.
+
+
 [Include any specific login details if applicable for a demo (e.g., Demo Username: test@example.com, Password: password123)]
 🧪 Testing (Optional but highly recommended for demonstrating quality)
 To run the automated tests for this project:
