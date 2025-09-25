@@ -11,12 +11,15 @@
       "image": "./assets/Uber_Logo_Black_RGB.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff",
-       "plugins": [
-      "expo-router"
-    ]
+      "plugins": [
+        "expo-router"
+      ]
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -24,10 +27,34 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.papaddog.myexpoUberClone"
+      "package": "com.papaddog.myexpoUberClone",
+      "runtimeVersion": "1.0.0"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "3daed313-56a5-4ed9-8426-f3feddac036c"
+      },
+      "Android": {
+        "config": {
+          "googleMaps": {
+            "apiKey": "process.env.MAPS_API_KEY"
+          }
+        },
+        "ios": {
+          "config": {
+            "googleMapsApiKey": "process.env.MAPS_API_KEY"
+          }
+        }
+      },
+      "plugins": [
+        "expo-router"
+      ]
+    },
+    "updates": {
+      "url": "https://u.expo.dev/3daed313-56a5-4ed9-8426-f3feddac036c"
     }
   }
 }

@@ -25,7 +25,7 @@ const App = () => {
     <SafeAreaProvider>
       <Stack.Navigator>
         <Stack.Screen 
-       name="SplashScreen" 
+       name="LoadingScreen" 
         component={LoadingScreen} 
         options={{ headerShown: false}}
        />

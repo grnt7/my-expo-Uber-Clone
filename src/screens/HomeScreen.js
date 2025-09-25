@@ -10,6 +10,8 @@ import { setOrigin, setDestination } from '../slices/navSlice'; // Assuming slic
 const HomeScreen = () => {
     const dispatch = useDispatch(); // Initialize useDispatch
 
+    
+
     // Handler for when the user selects an Origin place
     const handleOriginSelect = (placeDetails) => {
         dispatch(
@@ -32,6 +34,20 @@ const HomeScreen = () => {
             })
         );
     };
+    
+    const handleChange = async (text) => {
+  setInput(text);
+
+    if (text.length > 2) {
+      try {
+        const res = await fetch(`http://localhost:3000/autocomplete?input=${text}`);
+        const data = await res.json();
+        setSuggestions(data.predictions || []);
+      } catch (err) {
+        console.error('Autocomplete fetch failed:', err);
+      }
+    }
+  };
 
     return (
         <SafeAreaView style={tw`bg-black h-full`}>

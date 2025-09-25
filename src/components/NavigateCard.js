@@ -2,7 +2,7 @@
 import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity, Alert } from 'react-native'
 import tw from 'twrnc';
 import AutocompleteInput from '../components/AutocompleteInput';
-// You might not need Maps_APIKEY directly here if AutocompleteInput handles it internally
+
 // but it's good to keep it imported if other parts of NavigateCard or its sub-components use it
 //import { Maps_APIKEY } from '@env';
 import { useDispatch } from 'react-redux';
