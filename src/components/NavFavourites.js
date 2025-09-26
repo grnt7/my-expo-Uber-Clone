@@ -30,12 +30,16 @@ const NavFavourites = () => {
   
   return (
    <FlatList data={data} keyExtractor={(item) => item.id} 
-   ItemSeparatorComponent={() => (
-          <View 
-          style={[tw`bg-gray-200`, {height: 0.5}]}
-          
-          />
-   )}
+  // 💡 FIX 1: Add a dark background to the FlatList container itself 
+            // (or ensure its parent in HomeScreen is fully themed)
+            style={tw`  dark:bg-black`} 
+            
+            ItemSeparatorComponent={() => (
+                <View 
+                    // 💡 FIX 2: Apply dark mode style to the item separator line
+                    style={[tw`bg-gray-200 dark:bg-gray-700`, {height: 0.5}]}
+                />
+            )}
    renderItem={({item: { location, destination, icon} }) => (
         <TouchableOpacity style={tw`flex-row items-center p-5`}>
           <Icon
@@ -46,7 +50,7 @@ const NavFavourites = () => {
           size={20}
           />
           <View>
-            <Text style={tw`font-semibold text-lg`}>{location}</Text>
+            <Text style={tw`font-semibold text-lg text-gray-500`}>{location}</Text>
             <Text style={tw`text-gray-500`}>{destination}</Text>
           </View>
 

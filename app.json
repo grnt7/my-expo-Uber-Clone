@@ -8,7 +8,7 @@
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/Uber_Logo_Black_RGB.png",
+      "image": "./assets/Uber_Logo_Black.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff",
       "plugins": [
@@ -55,6 +55,9 @@
     },
     "updates": {
       "url": "https://u.expo.dev/3daed313-56a5-4ed9-8426-f3feddac036c"
-    }
+    },
+    "plugins": [
+      "react-native-edge-to-edge"
+    ]
   }
 }

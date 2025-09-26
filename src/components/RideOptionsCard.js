@@ -65,7 +65,7 @@ const RideOptionsCard = () => {
                 >
                     <Icon name="chevron-left" type="font-awesome" />
                 </TouchableOpacity>
-                <Text style={tw`text-center py-5 text-xl`}>Select A Ride{travelTimeInformation?.distance?.text || "Calculating..."}
+                <Text style={tw`text-center py-5 text-xl`}>Select A Ride {travelTimeInformation?.distance?.text || "Calculating..."}
                 </Text>
             </View>
 
@@ -75,20 +75,20 @@ const RideOptionsCard = () => {
                 keyExtractor={(item) => item.id}
                 horizontal // Make the FlatList scroll horizontally
                 showsHorizontalScrollIndicator={false} // Hide horizontal scroll indicator
-                contentContainerStyle={tw`px-4 py-2`} // Add some padding around the content
+                contentContainerStyle={tw`px-4 py-2 `} // Add some padding around the content
                 renderItem={({ item: { id, title, multiplier, image }, item }) => (
                     <TouchableOpacity
                         onPress={() => setSelected(item)}
                         style={tw`flex-col items-center p-4 m-2 rounded-lg ${id === selected?.id ? "bg-gray-200" : "bg-gray-50"} w-40 h-48 justify-center shadow-md`} // Added width, height, and alignment for horizontal layout
                     >
                         <Image style={tw`w-24 h-24 resize-contain`} source={{ uri: image }} />
-                        <View style={tw`items-center mt-2`}>
+                        <View style={tw`items-center mt-2 `}>
                             <Text style={tw`text-lg font-semibold`}>{title}</Text>
                             <Text style={tw`text-sm text-gray-600`}>
                                 {travelTimeInformation?.duration?.text || "Calculating..."}
                             </Text>
                         </View>
-                        <Text style={tw`text-xl font-bold mt-2`}>
+                        <Text style={tw`text-xl font-bold mt-2 mb-4`}>
                             {calculatePrice(multiplier, title)}
                         </Text>
                     </TouchableOpacity>
@@ -96,7 +96,7 @@ const RideOptionsCard = () => {
             />
 
             <View style={tw`mt-auto border-t border-gray-100`}>
-                <TouchableOpacity disabled={!selected} style={tw`bg-black py-3 m-3 rounded-xl ${!selected && "bg-gray-300"}`}>
+                <TouchableOpacity disabled={!selected} style={tw`bg-black py-3 m-3 rounded-xl ${!selected && "bg-gray-400"}`}>
                     <Text style={tw`text-center text-white text-xl`}>Choose{selected?.title || "Ride"}</Text>
                 </TouchableOpacity>
             </View>

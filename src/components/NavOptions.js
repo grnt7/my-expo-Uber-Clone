@@ -44,8 +44,12 @@ const data = [
                     onPress={() => navigation.navigate(item.screen)}
                     // Conditional styling to disable if origin is null
                     // Removed max-w-lg as it's redundant with w-40 for individual items
-                    style={tw`p-2 pl-6 pb-8 pt-4 bg-gray-200 m-2 w-40 rounded-lg ${!origin && 'opacity-20'}`}
-                    disabled={!origin} // Disable button if origin is not set
+                     // 👇 FIX 1: Apply dark mode background styles to the item container
+                   style={tw`
+        p-2 pl-6 pb-8 pt-4 m-2 w-40 rounded-lg 
+        bg-gray-200 dark:bg-gray-800  // 👈 FIX 1: The container background swap
+        ${!origin && 'opacity-20'}
+    `}
                 >
                     <View>
                         <Image

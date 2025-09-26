@@ -1,15 +1,23 @@
 // HomeScreen.js
-import { View, Text, SafeAreaView, Image } from 'react-native';
+import { View, Text, SafeAreaView, Image, } from 'react-native';
+import { useColorScheme } from 'nativewind'; 
 import tw from 'twrnc';
 import NavOptions from '../components/NavOptions';
 import NavFavourites from '../components/NavFavourites';
 import AutocompleteInput from '../components/AutocompleteInput';
+import ThemeToggle from '../components/ThemeToggle'; // Import the ThemeToggle component
 import { useDispatch } from 'react-redux';
 import { setOrigin, setDestination } from '../slices/navSlice'; // Assuming slices folder structure
 
+const LogoLight = require('../images/Uber_Logo_Black.png');
+const LogoDark = require('../images/Uber_Logo_White_RGB.png'); 
+
 const HomeScreen = () => {
     const dispatch = useDispatch(); // Initialize useDispatch
+      const { colorScheme } = useColorScheme(); // Gets the current state
 
+    // This line performs the swap
+    const currentLogo = colorScheme === 'dark' ? LogoDark : LogoLight;
     
 
     // Handler for when the user selects an Origin place
@@ -50,11 +58,14 @@ const HomeScreen = () => {
   };
 
     return (
-        <SafeAreaView style={tw`bg-black h-full`}>
-            <View style={tw`p-5`}>
+        <SafeAreaView style={tw`flex-1  dark:bg-gray-900`}>
+            <View style={tw`p-5 flex-1d dark:bg-gray-900`}>
+               
+                <ThemeToggle />  
                 <Image style={tw`w-50 h-24 resize-contain mt-5 mb-5 m-auto p-2`}
                    // Correct way to load a local image:
-                    source={require('../images/Uber-White-Logo.png')} //Adjust path relative to HomeScreen.js
+                    // source={require('../images/Uber-White-Logo.png')} //Adjust path relative to HomeScreen.js
+                     source={currentLogo}//Adjust path relative to HomeScreen.js
 />
                  {/* AutocompleteInput for Origin */}
                 <AutocompleteInput onPlaceSelect={handleOriginSelect} />
@@ -66,4 +77,3 @@ const HomeScreen = () => {
 };
 
 export default HomeScreen;
-

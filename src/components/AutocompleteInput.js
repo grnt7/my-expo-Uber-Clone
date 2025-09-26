@@ -1,5 +1,6 @@
 // AutocompleteInput.js
 import React, { useState, useEffect } from 'react';
+import { useColorScheme } from 'nativewind'
 import {
   View,
   TextInput,
@@ -12,6 +13,116 @@ import {
   Alert, // Make sure Alert is imported for potential error messages
 } from 'react-native';
 import { Maps_APIKEY } from '@env';
+
+const getThemedStyles = (colorScheme) => {
+  const isDark = colorScheme === 'dark';
+  
+  // Define colors based on the theme
+  const colors = {
+    background: isDark ? '#1F2937' : '#FFFFFF', // gray-800 or white
+    inputBackground: isDark ? '#374151' : '#F9F9F9', // gray-700 or light gray
+    text: isDark ? '#FFFFFF' : '#333333',
+    placeholder: isDark ? '#9CA3AF' : '#888888', // gray-400 or gray-500
+    border: isDark ? '#4B5563' : '#CCCCCC', // gray-600 or light gray
+    predictionsBackground: isDark ? '#1F2937' : 'white',
+    separator: isDark ? '#4B5563' : '#EEEEEE',
+  };
+
+  return StyleSheet.create({
+    wrapper: {
+      position: 'relative',
+      zIndex: 1000,
+      width: '100%',
+      // We assume the parent component handles padding, so remove paddingHorizontal: 16
+      marginTop: 30,
+    },
+    inputContainer: {
+      position: 'relative',
+      width: '100%',
+      height: 50,
+    },
+    input: {
+      width: '100%',
+      height: 50,
+      borderColor: colors.border,
+      borderWidth: 1,
+      paddingHorizontal: 12,
+      borderRadius: 20,
+      // Apply theme colors here
+      backgroundColor: colors.inputBackground, 
+      fontSize: 16,
+      color: colors.text, 
+      paddingRight: 40,
+    },
+    // ... (clearButton and loadingIndicator styles remain mostly static) ...
+    clearButton: {
+      position: 'absolute',
+      right: 10,
+      top: 0,
+      bottom: 0,
+      width: 30,
+      justifyContent: 'center',
+      alignItems: 'center',
+      zIndex: 1,
+    },
+    clearButtonText: {
+      fontSize: 18,
+      color: colors.placeholder, // Use placeholder color for the 'X'
+    },
+    loadingIndicator: {
+      position: 'absolute',
+      right: 45,
+      top: 0,
+      bottom: 0,
+      justifyContent: 'center',
+      alignItems: 'center',
+      zIndex: 1,
+    },
+    predictionsList: {
+      position: 'absolute',
+      width: '90%', // Adjust width as padding was removed from wrapper
+      top: 55,
+      // Center the list by matching padding
+      left: 0, 
+      right: 0,
+      marginHorizontal: '5%', // Ensure it's centered if wrapper doesn't have padding
+      maxHeight: 200,
+      // Apply theme colors here
+      backgroundColor: colors.predictionsBackground,
+      borderColor: colors.border, 
+      borderWidth: 1,
+      borderRadius: 8,
+      // ... (Shadow styles remain static)
+      ...Platform.select({
+        ios: {
+          shadowColor: '#000',
+          shadowOffset: { width: 0, height: 2 },
+          shadowOpacity: 0.2,
+          shadowRadius: 3,
+        },
+        android: {
+          elevation: 5,
+        },
+      }),
+      zIndex: 9999,
+    },
+    item: {
+      paddingVertical: 12,
+      paddingHorizontal: 12,
+      borderBottomWidth: 1,
+      borderColor: colors.separator, // Use theme color for separator
+    },
+    itemText: {
+      fontSize: 16,
+      color: colors.text, // Use theme text color
+    },
+    emptyListText: {
+      padding: 15,
+      textAlign: 'center',
+      color: colors.placeholder,
+    }
+  });
+};
 
 // Modified to accept 'value' and 'onChangeText' props for external control
 export default function AutocompleteInput({ onPlaceSelect, placeholder, value, onChangeText }) {
