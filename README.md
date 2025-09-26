@@ -3,7 +3,8 @@ Uber Clone build developed in REACT NATIVE with Expo (Navigation, redux, Tailwin
 My my-expo-Uber-Clone ✨
 
 
-<img width="200" height="500" alt="Screenshot_20250629_154959" src="https://github.com/user-attachments/assets/a9db0578-f663-40c9-a779-4ecdcedb9fa1" />
+
+<img width="200" height="500" alt="Screenshot_GetaRide" src="https://github.com/user-attachments/assets/7fc981e3-c018-4d73-9168-a425b5c8a878" />
 
 <img width="200" height="500"  alt="Screenshot_2AutocompleteDark" src="https://github.com/user-attachments/assets/3aec69c2-87af-4c9c-b337-b1b5c746605c" />
 
@@ -23,10 +24,15 @@ My my-expo-Uber-Clone ✨
 
 
 
+
+
 This is an Uber Clone developed using Papafam Let's Build an Uber Clone with REACT NATIVE!(Navigation, Redux, TailwindCSS, Google Autocomplete and other Google Maps API's. Youtube tutorial. 
 
 🚀 Live 
 See the application live by downloading Expo Go here: https://expo.dev/go
+
+and
+
 Scan the QR code:
 
 <img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/238ac0c5-c88d-41f8-8f6f-941d505b69a1" />
@@ -69,7 +75,7 @@ Follow these steps to get a copy of the project running on your local machine fo
 Clone the repository:
 Bash
 
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/grnt7/my-expo-Uber-Clone)
 Navigate into the project directory:
 Bash
 
@@ -88,12 +94,20 @@ Start the development server:
 Bash
 
 npm start  # or yarn start
+npx expo start
 The application should automatically open in your default browser at http://localhost:3000 (or another port if specified).
+
 🚀 Usage
-[Describe how a user would interact with your application.]
-Example: "Navigate through the product categories using the sidebar."
-Example: "Use the search bar to find specific items."
-Example: "Click the 'Add to Cart' button to simulate a purchase."
+
+1. Home screen: "Select your pickup location using the Google places autocomplete search bar."
+
+2. Home Screen: "Press the "Get a Ride" option to navigate to the Destination screen.
+
+3. Destination Map Screen: Select your Destination location using the Google places autocomplete search bar.
+
+4. Select a Ride: Navigate options by scrolling horozontally. Choose your Ride from Uber X, Uber XL, Uber Lux. Prices and Journey times calculated.
+
+
 [Include any specific login details if applicable for a demo (e.g., Demo Username: test@example.com, Password: password123)]
 🧪 Testing (Optional but highly recommended for demonstrating quality)
 To run the automated tests for this project:
@@ -119,7 +133,7 @@ Distributed under the MIT License. See LICENSE for more information.
 📞 Contact
 Your Name - Your Email Address
 
-Project Link: https://github.com/your-username/your-repo-name
+Project Link: https://github.com/grnt7/my-expo-Uber-Clone)
 
 LinkedIn: https://www.linkedin.com/in/your-linkedin-profile
 
