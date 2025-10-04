@@ -37,8 +37,8 @@ Scan the QR code:
 
 
 
-<img width="100" height="100" alt="UberCloneQRCode" src="https://github.com/user-attachments/assets/82bb915b-1517-4c79-9af3-180886e0ad3f" />
 
+<img width="100" height="100" alt="UberCloneQRCodeUpdate" src="https://github.com/user-attachments/assets/06733790-318d-4d81-aa1a-023cdbee8c97" />
 
 
 ✨ Features
