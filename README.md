@@ -43,11 +43,17 @@ Scan the QR code:
 
 ✨ Features
 Key Feature 1: Fully responsive design ensures seamless experience across all devices. 
+
 Key Feature 2: HomePage UI uses a Dark/Light Mode toggle with a stylish dark mode.
+
 Key Feature 3. An intuitive location Search bar with Google Places Autocomplete integrated for finding Places/ addresses.
+
 Key Feature 4: Navigate from Get A Ride to Mapscreen using Touchable Opacity. Destination Search Bar with GooglePlaces Autocomplete. On selection tansitions seamlessly to Ride Options Screen.
+
 Key Feature 5: Google Distance Matrix API ("Dynamic data fetching from an Google Maps API calculation of distance between two locations").
+
 Key Feature 6: Price Calculation Rates set based on Vehicle Choice, UberX, UberXL, UberLux.
+
 Key Feature 7: Navigate back to homescreen using Hamburger Menu.
 
 🛠️ Technologies Used
