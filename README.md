@@ -42,6 +42,7 @@ Scan the QR code:
 
 
 ✨ Features
+
 Key Feature 1: Fully responsive design ensures seamless experience across all devices. 
 
 Key Feature 2: HomePage UI uses a Dark/Light Mode toggle with a stylish dark mode.
