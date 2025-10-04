@@ -35,7 +35,11 @@ and
 
 Scan the QR code:
 
-<img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/238ac0c5-c88d-41f8-8f6f-941d505b69a1" />
+
+
+<img width="100" height="100" alt="UberCloneQRCode" src="https://github.com/user-attachments/assets/82bb915b-1517-4c79-9af3-180886e0ad3f" />
+
+
 
 ✨ Features
 Key Feature 1: Fully responsive design ensures seamless experience across all devices. 
