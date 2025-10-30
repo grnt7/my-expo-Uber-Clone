@@ -61,7 +61,7 @@ Key Feature 7: Navigate back to homescreen using Hamburger Menu.
 Frontend:
 React Native
 HTML5
-Tailwind CSS or Styled Components
+Tailwind CSS for Styling Components
 JavaScript (ES6+)
 
 React Router Dom (for client-side routing)
