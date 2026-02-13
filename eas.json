@@ -9,19 +9,22 @@
       "distribution": "internal",
       "env": {
         "MAPS_APIKEY": "@MAPS_APIKEY"
-      }
+      },
+      "channel": "development"
     },
     "preview": {
       "distribution": "internal",
       "env": {
         "MAPS_APIKEY": "@MAPS_APIKEY"
-      }
+      },
+      "channel": "preview"
     },
     "production": {
       "autoIncrement": true,
       "env": {
         "MAPS_APIKEY": "@MAPS_APIKEY"
-      }
+      },
+      "channel": "production"
     }
   },
   "submit": {

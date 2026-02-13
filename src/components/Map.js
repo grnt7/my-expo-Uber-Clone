@@ -14,7 +14,7 @@ const Map = () => {
   const mapRef = useRef(null);
   const dispatch = useDispatch();
 
-  useEffect(() => {
+useEffect(() => {
     if (!origin || !destination) return;
 
     const getTravelTime = async () => {
@@ -23,12 +23,21 @@ const Map = () => {
         )
             .then((res) => res.json())
             .then((data) => {
-                dispatch(setTravelTimeInformation(data.rows[0].elements[0]));
-            });
+                // ADD THIS CHECK: Only dispatch if the data actually exists
+                if (data.status === "OK" && data.rows[0]?.elements[0]) {
+                    dispatch(setTravelTimeInformation(data.rows[0].elements[0]));
+                } else {
+                    console.log("Distance Matrix Error:", data.error_message || "Invalid Data");
+                }
+            })
+            .catch(err => console.error("Network Error:", err)); // Catch network failures
     };
     getTravelTime();
 }, [origin, destination, Maps_APIKEY]);
-  return (
+
+if (!origin?.location) return <View style={tw`flex-1 bg-gray-100`} />;
+  
+return (
     <MapView
       ref={mapRef}
       style={tw`flex-1`}

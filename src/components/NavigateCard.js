@@ -1,5 +1,6 @@
 // NavigateCard.js
-import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity, Alert } from 'react-native'
+import { StyleSheet, Text, View, Platform, KeyboardAvoidingView, TouchableOpacity, Alert } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context';
 import tw from 'twrnc';
 import AutocompleteInput from '../components/AutocompleteInput';
 
@@ -37,11 +38,20 @@ const NavigateCard = () => {
     };
 
     return (
-        <SafeAreaView style={tw`bg-white flex-1`}>
+         <SafeAreaView style={tw`bg-white flex-1`}>
+      
+       
+           <KeyboardAvoidingView
+           style={tw`flex-1`}
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+    // 3. Adjust offset (Android often needs less than iOS)
+      keyboardVerticalOffset={Platform.OS === 'ios' ? 100 : 0}
+      >
+       
             <Text style={tw`text-center py-5 text-xl`}>Good Morning, David</Text>
             <View style={tw`border-t border-gray-200 flex-shrink`}>
 
-                <View style={tw`p-5`}>
+                <View style={tw`p-5 mt--5`}>
                     {/* >>>>>>>>>>>>>> USE YOUR CUSTOM AutocompleteInput HERE <<<<<<<<<<<<<< */}
                     <AutocompleteInput
                         placeholder="Where to?"
@@ -49,10 +59,11 @@ const NavigateCard = () => {
                         // No need for 'query' prop or 'styles' prop here for your custom component
                     />
                 </View>
-
+              
+        
                 <NavFavourites />
             </View>
-
+</KeyboardAvoidingView>
             <View
                 style={tw`flex-row bg-white justify-evenly py-2 mt-auto border-t border-gray-100`}>
 
@@ -68,7 +79,9 @@ const NavigateCard = () => {
                     <Text style={tw`text-center`}>Eats</Text>
                 </TouchableOpacity>
             </View>
-        </SafeAreaView>
+        
+         
+            </SafeAreaView>
     );
 };
 
@@ -78,7 +91,7 @@ export default NavigateCard;
 const toInputBoxStyles = StyleSheet.create({
     container: {
         backgroundColor:"white",
-        paddingTop:20,
+        paddingTop:10,
         flex:0,
     },
     textInput: {

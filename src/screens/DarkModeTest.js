@@ -1,5 +1,6 @@
 import { View, Text, Image, Pressable } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+
 import tw from "twrnc";
 import { useColorScheme } from "nativewind";
 
@@ -36,7 +37,7 @@ export default function DarkModeTest() {
         <ThemeToggle />
 
         <Image
-          style={tw`w-50 h-24 resize-contain mb-10`}
+          style={tw`w-50 h-24 resizeMode="contain" mb-10`}
           source={currentLogo}
         />
 

@@ -11,13 +11,13 @@ import RideOptionsCard from './src/components/RideOptionsCard'; // Adjust the pa
 import 'react-native-gesture-handler'; // Ensure this is imported before any other imports that use gestures
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native'; // Import NavigationContainer if you are using navigation
 import { createStackNavigator } from '@react-navigation/stack'; // Import createStackNavigator if you are using stack navigation
-import { useColorScheme } from 'nativewind'; // 👈 Import the hook
+import { useColorScheme } from 'nativewind'; // Import the hook
 import { useAppTheme } from './src/hooks/useAppTheme'; // Custom hook to manage theme
 
 // Redux
 const App = () => {
 
-  // const { colorScheme, toggleColorScheme } = useColorScheme(); // 👈 Get the current color scheme (light or dark)
+  // const { colorScheme, toggleColorScheme } = useColorScheme(); // Get the current color scheme (light or dark)
   const activeTheme = useAppTheme();
   const Stack = createStackNavigator();
 
@@ -38,7 +38,7 @@ const App = () => {
         component={HomeScreen} 
        options={{ 
         headerShown: false,
-        // 👇 ADD THIS: Set the card background to be transparent or match dark theme
+        //ADD THIS: Set the card background to be transparent or match dark theme
        cardStyle: { backgroundColor: activeTheme.colors.background }
     }}
        />

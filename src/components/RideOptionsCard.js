@@ -1,15 +1,21 @@
-import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity, FlatList, Image } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, FlatList, Image } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
 import React, { useState } from 'react';
 import { Icon } from "@rneui/themed";
 import tw from 'twrnc';
+import UberX from '../images/UberXcar.webp';
+import UberXL from '../images/UberXLnoBg.webp';
+import UberLux from '../images/UberLuxNobg.webp';
+
 import { useNavigation } from '@react-navigation/native';
 import { useSelector } from 'react-redux';
 import { selectTravelTimeInformation } from '../slices/navSlice';
 
 const data = [
-    { id: "Uber-X-123", title: "Uber X", multiplier: 1.0, image: "https://links.papareact.com/3pn" },
-    { id: "Uber-XL-456", title: "Uber XL", multiplier: 1.2, image: "https://links.papareact.com/5w8" },
-    { id: "Uber-LUX-123", title: "Uber LUX", multiplier: 1.75, image: "https://links.papareact.com/7pf" },
+    { id: "Uber-X-123", title: "Uber X", multiplier: 1.0, image:UberX },
+    { id: "Uber-XL-456", title: "Uber XL", multiplier: 1.2, image: UberXL },
+    { id: "Uber-LUX-123", title: "Uber LUX", multiplier: 1.75, image: UberLux },
 ];
 
 // Define a BASE_FARE (e.g., £2.50)
@@ -53,6 +59,7 @@ const RideOptionsCard = () => {
     };
 
     return (
+        
         <SafeAreaView style={tw`bg-white flex-grow`}>
             <View>
                 {/* Changed navigation action from navigate("HomeScreen") to popToTop() */}
@@ -63,6 +70,7 @@ const RideOptionsCard = () => {
                     })}
                     style={tw`absolute top-3 left-5 p-3 rounded-full`}
                 >
+                    
                     <Icon name="chevron-left" type="font-awesome" />
                 </TouchableOpacity>
                 <Text style={tw`text-center py-5 text-xl`}>Select A Ride {travelTimeInformation?.distance?.text || "Calculating..."}
@@ -75,13 +83,13 @@ const RideOptionsCard = () => {
                 keyExtractor={(item) => item.id}
                 horizontal // Make the FlatList scroll horizontally
                 showsHorizontalScrollIndicator={false} // Hide horizontal scroll indicator
-                contentContainerStyle={tw`px-4 py-2 `} // Add some padding around the content
+                contentContainerStyle={tw`px-2 py-2 `} // Add some padding around the content
                 renderItem={({ item: { id, title, multiplier, image }, item }) => (
                     <TouchableOpacity
                         onPress={() => setSelected(item)}
-                        style={tw`flex-col items-center p-4 m-2 rounded-lg ${id === selected?.id ? "bg-gray-200" : "bg-gray-50"} w-40 h-48 justify-center shadow-md`} // Added width, height, and alignment for horizontal layout
+                        style={tw`flex-col items-center p-2 m-2 rounded-lg ${id === selected?.id ? "bg-gray-200" : "bg-gray-50"} w-40 h-48 justify-center shadow-md`} // Added width, height, and alignment for horizontal layout
                     >
-                        <Image style={tw`w-24 h-24 resize-contain`} source={{ uri: image }} />
+                        <Image style={tw`w-36 h-24 resizeMode="contain"`} source={ item.image } />
                         <View style={tw`items-center mt-2 `}>
                             <Text style={tw`text-lg font-semibold`}>{title}</Text>
                             <Text style={tw`text-sm text-gray-600`}>

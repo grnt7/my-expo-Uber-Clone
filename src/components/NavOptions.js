@@ -3,6 +3,8 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import tw from 'twrnc';
 import { Icon } from "@rneui/themed"; // Use the updated RNEUI package
+import UberCarImage from '../images/UberXcar.webp';
+import UberFoodImage from '../images/order-food.png';
 import { useNavigation } from '@react-navigation/native';//installed
 import { useSelector } from'react-redux';
 import { selectOrigin } from '../slices/navSlice';
@@ -12,7 +14,7 @@ const data = [
     {
         id:"123",
         title:"Get a Ride",
-        image: "https://links.papareact.com/3pn",
+        image: UberCarImage,
         screen: "MapScreen",
     
     },
@@ -20,7 +22,7 @@ const data = [
     {
         id: "456",
         title: "Order Food",
-        image: "https://links.papareact.com/28w",
+        image: UberFoodImage,
         screen:  "EatScreen",//change in future...
     },
     ];
@@ -44,17 +46,17 @@ const data = [
                     onPress={() => navigation.navigate(item.screen)}
                     // Conditional styling to disable if origin is null
                     // Removed max-w-lg as it's redundant with w-40 for individual items
-                     // 👇 FIX 1: Apply dark mode background styles to the item container
+                     //  FIX 1: Apply dark mode background styles to the item 
                    style={tw`
         p-2 pl-6 pb-8 pt-4 m-2 w-40 rounded-lg 
-        bg-gray-200 dark:bg-gray-800  // 👈 FIX 1: The container background swap
+        bg-gray-200 dark:bg-gray-800  
         ${!origin && 'opacity-20'}
-    `}
+    `}// Add background color for light and dark modes
                 >
                     <View>
                         <Image
                             style={{ width: 120, height: 120, resizeMode: "contain" }}
-                            source={{ uri: item.image }}
+                            source={ item.image }
                         />
                         <Text style={tw`mt-2 text-lg font-semibold`}>{item.title}</Text>
                         <AntDesign name= "arrow-right"

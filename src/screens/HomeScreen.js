@@ -1,5 +1,6 @@
 // HomeScreen.js
-import { View, Text, SafeAreaView, Image, } from 'react-native';
+import { View, Text, Image, } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useColorScheme } from 'nativewind'; 
 import tw from 'twrnc';
 import NavOptions from '../components/NavOptions';
@@ -16,7 +17,7 @@ const HomeScreen = () => {
     const dispatch = useDispatch(); // Initialize useDispatch
       const { colorScheme } = useColorScheme(); // Gets the current state
 
-    // This line performs the swap
+    // This line performs the 
     const currentLogo = colorScheme === 'dark' ? LogoDark : LogoLight;
     
 
@@ -43,26 +44,26 @@ const HomeScreen = () => {
         );
     };
     
-    const handleChange = async (text) => {
-  setInput(text);
+//     const handleChange = async (text) => {
+//   setInput(text);
 
-    if (text.length > 2) {
-      try {
-        const res = await fetch(`http://localhost:3000/autocomplete?input=${text}`);
-        const data = await res.json();
-        setSuggestions(data.predictions || []);
-      } catch (err) {
-        console.error('Autocomplete fetch failed:', err);
-      }
-    }
-  };
+//     if (text.length > 2) {
+//       try {
+//         const res = await fetch(`http://localhost:3000/autocomplete?input=${text}`);
+//         const data = await res.json();
+//         setSuggestions(data.predictions || []);
+//       } catch (err) {
+//         console.error('Autocomplete fetch failed:', err);
+//       }
+//     }
+//   };
 
     return (
         <SafeAreaView style={tw`flex-1  dark:bg-gray-900`}>
-            <View style={tw`p-5 flex-1d dark:bg-gray-900`}>
+            <View style={tw`p-5 flex-1 dark:bg-gray-900`}>
                
                 <ThemeToggle />  
-                <Image style={tw`w-50 h-24 resize-contain mt-5 mb-5 m-auto p-2`}
+                <Image style={tw`w-50 h-24 resizeMode="contain" mt-5 mb-5 m-auto p-2`}
                    // Correct way to load a local image:
                     // source={require('../images/Uber-White-Logo.png')} //Adjust path relative to HomeScreen.js
                      source={currentLogo}//Adjust path relative to HomeScreen.js
