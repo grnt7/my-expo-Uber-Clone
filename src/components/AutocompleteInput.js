@@ -167,8 +167,7 @@ export default function AutocompleteInput({ onPlaceSelect, placeholder, value, o
       ? '' 
       : 'https://my-expo-uber-clone-kyfe201iv-david-gs-projects-4e32337b.vercel.app/'; // <--- REPLACE WITH YOUR ACTUAL VERCEL URL
 
-    const url = `${baseUrl}/api/autocomplete?input=${encodeURIComponent(input)}`;
-
+const url = `${baseUrl.replace(/\/$/, '')}/api/autocomplete?input=${encodeURIComponent(input)}`;
     console.log('Fetching from:', url);
 
     const response = await fetch(url);
