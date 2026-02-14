@@ -12,7 +12,6 @@ import {
   Platform,
   Alert, // Make sure Alert is imported for potential error messages
 } from 'react-native';
-import { NEXT_PUBLIC_GOOGLE_MAPS_API_KEY } from '@env';
 
 const getThemedStyles = (colorScheme) => {
   const isDark = colorScheme === 'dark';
@@ -125,7 +124,7 @@ const getThemedStyles = (colorScheme) => {
 };
 
 // Modified to accept 'value' and 'onChangeText' props for external control
-export default function AutocompleteInput({ onPlaceSelect, placeholder, value, onChangeText }) {
+const AutocompleteInput = ({ onPlaceSelect, placeholder, value, onChangeText }) => {
   // Use internal state 'localQuery' for what's typed,
   // but initial value comes from 'value' prop if provided.
   const [localQuery, setLocalQuery] = useState(value || ''); // Initialize with prop.value or empty string
@@ -167,7 +166,7 @@ export default function AutocompleteInput({ onPlaceSelect, placeholder, value, o
       ? '' 
       : 'https://my-expo-uber-clone-kyfe201iv-david-gs-projects-4e32337b.vercel.app/'; // <--- REPLACE WITH YOUR ACTUAL VERCEL URL
 
-const url = `${baseUrl.replace(/\/$/, '')}/api/autocomplete?input=${encodeURIComponent(input)}`;
+    const url = `${baseUrl.replace(/\/$/, '')}/api/autocomplete?input=${encodeURIComponent(input)}`;
     console.log('Fetching from:', url);
 
     const response = await fetch(url);
@@ -292,6 +291,7 @@ const url = `${baseUrl.replace(/\/$/, '')}/api/autocomplete?input=${encodeURICom
     </View>
   );
 }
+export default AutocompleteInput;
 
 const styles = StyleSheet.create({
   wrapper: {

@@ -4,7 +4,7 @@ import tw from 'twrnc';
 
 const Map = ({ origin, destination }) => {
   // Use the key that matches your Vercel Environment Variables exactly
-  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || process.env.EXPO_PUBLIC_MAPS_APIKEY;
+  const apiKey = process.env.EXPO_PUBLIC_GOOGLE_MAPS_API_KEY || process.env.EXPO_PUBLIC_GOOGLE_MAPS_API_KEY;
 
   return (
     <div style={{ width: '100%', height: '100%', minHeight: '400px' }}> 
