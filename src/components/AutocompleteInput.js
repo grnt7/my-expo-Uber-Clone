@@ -159,32 +159,30 @@ export default function AutocompleteInput({ onPlaceSelect, placeholder, value, o
 
   // Function to fetch autocomplete predictions from Google Places API
   const fetchPredictions = async (input) => {
-    setLoading(true); // Show loading indicator
-    setShowPredictions(true); // Ensure predictions list is visible when fetching
-    try {
-      const url = `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${encodeURIComponent(
-        input
-      )}&key=${NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&language=en`;
+  setLoading(true);
+  setShowPredictions(true);
+  try {
+    // CHANGE: Point to your internal API route instead of Google
+    const url = `/api/autocomplete?input=${encodeURIComponent(input)}`;
 
-      console.log('Fetching URL:', url); // For debugging: logs the API request URL
+    console.log('Fetching from Proxy:', url);
 
-      const response = await fetch(url);
-      const json = await response.json();
+    const response = await fetch(url);
+    const json = await response.json();
 
-      if (json.status === 'OK') {
-        setPredictions(json.predictions); // Update predictions state
-      } else {
-        // Log detailed API errors for easier debugging
-        console.warn('Google API Error (Autocomplete):', json.status, json.error_message);
-        setPredictions([]); // Clear predictions on API error
-      }
-    } catch (err) {
-      console.error('Fetch error (Autocomplete):', err);
-      setPredictions([]); // Clear predictions on network/fetch error
-    } finally {
-      setLoading(false); // Hide loading indicator
+    if (json.status === 'OK') {
+      setPredictions(json.predictions);
+    } else {
+      console.warn('Google API Error:', json.status);
+      setPredictions([]);
     }
-  };
+  } catch (err) {
+    console.error('Fetch error (Autocomplete):', err);
+    setPredictions([]);
+  } finally {
+    setLoading(false);
+  }
+};
 
   // Function to fetch detailed information about a selected place
   const handleSelect = async (place) => {
@@ -193,7 +191,7 @@ export default function AutocompleteInput({ onPlaceSelect, placeholder, value, o
     setShowPredictions(false); // Hide the predictions list
 
     try {
-      const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${place.place_id}&key=${Maps_APIKEY}`;
+      const url = `/api/details?place_id=${place.place_id}`;
       const response = await fetch(url);
       const json = await response.json();
 
