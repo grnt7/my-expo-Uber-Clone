@@ -157,35 +157,42 @@ const AutocompleteInput = ({ onPlaceSelect, placeholder, value, onChangeText }) 
   }, [localQuery]); // Re-run effect when localQuery changes
 
   // Function to fetch autocomplete predictions from Google Places API
-  const fetchPredictions = async (input) => {
+ const fetchPredictions = async (input) => {
   setLoading(true);
   setShowPredictions(true);
   try {
-    // Determine the base URL: empty for web, Vercel URL for mobile
-    const baseUrl = Platform.OS === 'web' 
-      ? '' 
-      : 'https://my-expo-uber-clone-kyfe201iv-david-gs-projects-4e32337b.vercel.app/'; // <--- REPLACE WITH YOUR ACTUAL VERCEL URL
-
-    const url = `${baseUrl.replace(/\/$/, '')}/api/autocomplete?input=${encodeURIComponent(input)}`;
-    console.log('Fetching from:', url);
+    const host = 'https://my-expo-uber-clone-kyfe201iv-david-gs-projects-4e32337b.vercel.app';
+    const url = `${host}/api/autocomplete?input=${encodeURIComponent(input)}`;
+    
+    console.log('Attempting fetch from:', url);
 
     const response = await fetch(url);
+
+    // --- NEW DEBUG CHECK START ---
+    if (!response.ok) {
+      // This grabs the HTML error message instead of crashing
+      const errorText = await response.text(); 
+      console.error(`Vercel Server Error (${response.status}):`, errorText.substring(0, 200));
+      setPredictions([]);
+      return; // Stop here so we don't try to parse HTML as JSON
+    }
+    // --- NEW DEBUG CHECK END ---
+
     const json = await response.json();
 
     if (json.status === 'OK') {
       setPredictions(json.predictions);
     } else {
-      console.warn('Google API Error:', json.status);
+      console.warn('Google API returned status:', json.status);
       setPredictions([]);
     }
   } catch (err) {
-    console.error('Fetch error (Autocomplete):', err);
+    console.error('Network or Parse Error:', err);
     setPredictions([]);
   } finally {
     setLoading(false);
   }
 };
-
   // Function to fetch detailed information about a selected place
   const handleSelect = async (place) => {
     setLocalQuery(place.description); // Set the TextInput value to the selected place's description
