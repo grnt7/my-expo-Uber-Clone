@@ -12,7 +12,7 @@ import {
   Platform,
   Alert, // Make sure Alert is imported for potential error messages
 } from 'react-native';
-import { Maps_APIKEY } from '@env';
+import { NEXT_PUBLIC_GOOGLE_MAPS_API_KEY } from '@env';
 
 const getThemedStyles = (colorScheme) => {
   const isDark = colorScheme === 'dark';
@@ -164,7 +164,7 @@ export default function AutocompleteInput({ onPlaceSelect, placeholder, value, o
     try {
       const url = `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${encodeURIComponent(
         input
-      )}&key=${Maps_APIKEY}&language=en`;
+      )}&key=${NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&language=en`;
 
       console.log('Fetching URL:', url); // For debugging: logs the API request URL
 

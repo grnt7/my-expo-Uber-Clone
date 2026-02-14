@@ -1,26 +1,25 @@
 {
   "expo": {
     "name": "my-expo-Uber-Clone",
-    "slug": "my-expo-Uber-Clone",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "newArchEnabled": true,
-    "scheme": "my-expo-uber-clone", 
-    "splash": {
-      "image": "./src/images/Uber_Logo_Black.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
+   
+    
+   
+    "userInterfaceStyle": "automatic", 
+    
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.papaddog.myexpoUberClone",
+      
+      
+      "userInterfaceStyle": "automatic", 
+      
       "config": {
         "googleMapsApiKey": "AIzaSy..." 
       }
     },
+    
     "android": {
+      "userInterfaceStyle": "automatic", 
       "package": "com.papaddog.myexpoUberClone",
       "config": {
         "googleMaps": {

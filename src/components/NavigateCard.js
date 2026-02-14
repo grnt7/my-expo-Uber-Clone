@@ -2,7 +2,7 @@
 import { StyleSheet, Text, View, Platform, KeyboardAvoidingView, TouchableOpacity, Alert } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import tw from 'twrnc';
-import AutocompleteInput from '../components/AutocompleteInput';
+
 
 // but it's good to keep it imported if other parts of NavigateCard or its sub-components use it
 //import { Maps_APIKEY } from '@env';
