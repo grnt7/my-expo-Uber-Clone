@@ -162,10 +162,14 @@ export default function AutocompleteInput({ onPlaceSelect, placeholder, value, o
   setLoading(true);
   setShowPredictions(true);
   try {
-    // CHANGE: Point to your internal API route instead of Google
-    const url = `/api/autocomplete?input=${encodeURIComponent(input)}`;
+    // Determine the base URL: empty for web, Vercel URL for mobile
+    const baseUrl = Platform.OS === 'web' 
+      ? '' 
+      : 'https://my-expo-uber-clone-kyfe201iv-david-gs-projects-4e32337b.vercel.app/'; // <--- REPLACE WITH YOUR ACTUAL VERCEL URL
 
-    console.log('Fetching from Proxy:', url);
+    const url = `${baseUrl}/api/autocomplete?input=${encodeURIComponent(input)}`;
+
+    console.log('Fetching from:', url);
 
     const response = await fetch(url);
     const json = await response.json();
