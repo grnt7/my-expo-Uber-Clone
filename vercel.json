@@ -3,13 +3,18 @@
   "outputDirectory": "dist",
   "rewrites": [
     { 
-      "source": "/api/(.*)", 
-      "destination": "/api/$1" 
+      "source": "/api/places", 
+      "destination": "/api/places.js" 
     },
     { 
-      "source": "/(.*)", 
-      "destination": "/index.html" 
-    }
+      "source": "/api/distance", 
+      "destination": "/api/distance.js" 
+    },
+    { 
+      "source": "/api/details", 
+      "destination": "/api/details.js" 
+    },
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [
     {

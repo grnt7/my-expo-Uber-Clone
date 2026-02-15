@@ -1,16 +1,15 @@
-// @ts-nocheck
-import { NextResponse } from "next/server";
-
-export async function GET(request: Request) {
-  // 1. Get the 'input' from the URL (e.g., /api/autocomplete?input=london)
-  const { searchParams } = new URL(request.url);
-  const input = searchParams.get("input");
+// api/autocomplete.js (Standard Node.js version)
+export default async function handler(req, res) {
+  // 1. Get input from query (Standard Node syntax)
+  const { input } = req.query;
 
   if (!input) {
-    return NextResponse.json({ error: "Input is required" }, { status: 400 });
+    return res.status(400).json({ error: "Input is required" });
   }
 
-  const apiKey = process.env.GOOGLE_MAPS_API_KEY;
+  // Use the exact key name from your Vercel Environment Variables
+  const apiKey = process.env.EXPO_PUBLIC_GOOGLE_MAPS_API_KEY; 
+  
   const googleUrl = `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${encodeURIComponent(
     input
   )}&key=${apiKey}&language=en`;
@@ -19,9 +18,9 @@ export async function GET(request: Request) {
     const response = await fetch(googleUrl);
     const data = await response.json();
 
-    // 2. Return the Google data back to your Uber app
-    return NextResponse.json(data);
+    // 2. Return data
+    res.status(200).json(data);
   } catch (error) {
-    return NextResponse.json({ error: "Failed to fetch from Google" }, { status: 500 });
+    res.status(500).json({ error: "Failed to fetch from Google" });
   }
 }
