@@ -3,8 +3,8 @@
   "outputDirectory": "dist",
   "rewrites": [
     { 
-      "source": "/api/places", 
-      "destination": "/api/places.js" 
+      "source": "/api/autocomplete", 
+      "destination": "/api/autocomplete.js" 
     },
     { 
       "source": "/api/distance", 
