@@ -162,7 +162,7 @@ const AutocompleteInput = ({ onPlaceSelect, placeholder, value, onChangeText }) 
   setShowPredictions(true);
   try {
     const host = 'https://my-expo-uber-clone-kyfe201iv-david-gs-projects-4e32337b.vercel.app';
-    const url = `${host}/api/autocomplete?input=${encodeURIComponent(input)}`;
+    const url = `${host}/api/places?input=${encodeURIComponent(input)}`;
     
     console.log('Attempting fetch from:', url);
 

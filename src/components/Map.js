@@ -33,7 +33,7 @@ useEffect(() => {
             .catch(err => console.error("Network Error:", err)); // Catch network failures
     };
     getTravelTime();
-}, [origin, destination, Maps_APIKEY]);
+}, [origin, destination,  EXPO_PUBLIC_GOOGLE_MAPS_API_KEY]);
 
 if (!origin?.location) return <View style={tw`flex-1 bg-gray-100`} />;
   
@@ -54,7 +54,7 @@ return (
         <MapViewDirections
         origin={origin.description}
         destination={destination.description}
-        apikey={Maps_APIKEY}
+        apikey={EXPO_PUBLIC_GOOGLE_MAPS_API_KEY}
         strokeWidth={3}
         strokeColor="black"
 
