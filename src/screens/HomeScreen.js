@@ -63,11 +63,11 @@ const HomeScreen = () => {
             <View style={tw`p-5 flex-1 dark:bg-gray-900`}>
                
                 <ThemeToggle />  
-                <Image style={tw`w-50 h-24 resizeMode="contain" mt-5 mb-5 m-auto p-2`}
-                   // Correct way to load a local image:
-                    // source={require('../images/Uber-White-Logo.png')} //Adjust path relative to HomeScreen.js
-                     source={currentLogo}//Adjust path relative to HomeScreen.js
-/>
+              <Image 
+                style={tw`w-50 h-24 mt-5 mb-5 m-auto p-2`} // Only Tailwind classes here
+                resizeMode="contain"                       // Direct React Native prop
+                source={currentLogo} 
+                />
                  {/* AutocompleteInput for Origin */}
                 <AutocompleteInput onPlaceSelect={handleOriginSelect} />
                 <NavOptions />

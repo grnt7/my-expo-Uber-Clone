@@ -89,7 +89,10 @@ const RideOptionsCard = () => {
                         onPress={() => setSelected(item)}
                         style={tw`flex-col items-center p-2 m-2 rounded-lg ${id === selected?.id ? "bg-gray-200" : "bg-gray-50"} w-40 h-48 justify-center shadow-md`} // Added width, height, and alignment for horizontal layout
                     >
-                        <Image style={tw`w-36 h-24 resizeMode="contain"`} source={ item.image } />
+                        <Image style={tw`w-36 h-24`} 
+  resizeMode="contain" 
+  source={item.image} 
+/>
                         <View style={tw`items-center mt-2 `}>
                             <Text style={tw`text-lg font-semibold`}>{title}</Text>
                             <Text style={tw`text-sm text-gray-600`}>

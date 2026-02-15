@@ -36,10 +36,7 @@ export default function DarkModeTest() {
       <View style={tw`flex-1 items-center justify-center bg-white dark:bg-gray-900`}>
         <ThemeToggle />
 
-        <Image
-          style={tw`w-50 h-24 resizeMode="contain" mb-10`}
-          source={currentLogo}
-        />
+        <Image source={currentLogo} style={tw`w-40 h-40 mb-5`} resizeMode="contain" />
 
         <Text style={tw`text-lg font-bold text-black dark:text-white`}>
           Current theme: {colorScheme}
